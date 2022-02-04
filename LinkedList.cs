@@ -2,180 +2,177 @@
 
 namespace DataStructures
 {
-    partial class Program
+    public class LinkedList
     {
-        public class LinkedList
+        private class Node
         {
-            private class Node
+            public Node(int value)
             {
-                public Node(int value)
-                {
-                    this.value = value;
-                }
-                public int value;
-                public Node next;
+                this.value = value;
             }
-            private Node first;
-            private Node last;
-            private int size;
-            private bool IsEmpty() => first == null;
-            public int Size() => size;
-            private Node PrevNode(Node node)
+            public int value;
+            public Node next;
+        }
+        private Node first;
+        private Node last;
+        private int size;
+        private bool IsEmpty() => first == null;
+        public int Size() => size;
+        private Node PrevNode(Node node)
+        {
+            var current = first;
+            while (current != null)
             {
-                var current = first;
-                while (current != null)
-                {
-                    if (current.next == node) return current;
-                    current = current.next;
-                }
-                return null;
+                if (current.next == node) return current;
+                current = current.next;
             }
-            public void AddFirst(int item)
+            return null;
+        }
+        public void AddFirst(int item)
+        {
+            var node = new Node(item);
+            if (IsEmpty())
+                last = first = node;
+            else
             {
-                var node = new Node(item);
-                if (IsEmpty())
-                    last = first = node;
-                else
-                {
-                    node.next = first;
-                    first = node;
-                }
-                size++;
+                node.next = first;
+                first = node;
             }
-            public void AddLast(int item)
+            size++;
+        }
+        public void AddLast(int item)
+        {
+            var node = new Node(item);
+            if (IsEmpty())
+                last = first = node;
+            else
             {
-                var node = new Node(item);
-                if (IsEmpty())
-                    last = first = node;
-                else
-                {
-                    last.next = node;
-                    last = node;
-                }
-                size++;
+                last.next = node;
+                last = node;
             }
-            public void DeleteFirst()
+            size++;
+        }
+        public void DeleteFirst()
+        {
+            if (IsEmpty())
+                throw new Exception();
+            if (first == last)
             {
-                if (IsEmpty())
-                    throw new Exception();
-                if (first == last)
-                {
-                    first = last = null;
-                }
-                else
-                {
-                    var second = first.next;
-                    first.next = null;
-                    first = second;
-                }
-                size--;
+                first = last = null;
             }
-            public void DeleteLast()
+            else
             {
-                if (IsEmpty())
-                    throw new Exception();
+                var second = first.next;
+                first.next = null;
+                first = second;
+            }
+            size--;
+        }
+        public void DeleteLast()
+        {
+            if (IsEmpty())
+                throw new Exception();
 
-                if (first == last)
-                    first = last = null;
+            if (first == last)
+                first = last = null;
 
-                var prevNode = PrevNode(last);
-                last = prevNode;
-                last.next = null;
-                size--;
-            }
-            public int IndexOf(int item)
+            var prevNode = PrevNode(last);
+            last = prevNode;
+            last.next = null;
+            size--;
+        }
+        public int IndexOf(int item)
+        {
+            if (IsEmpty())
+                throw new Exception();
+            var current = first;
+            var index = 0;
+            while (current != null)
             {
-                if (IsEmpty())
-                    throw new Exception();
-                var current = first;
-                var index = 0;
-                while (current != null)
-                {
-                    if (item == current.value)
-                        return index;
-                    index++;
-                    current = current.next;
-                }
-                return -1;
+                if (item == current.value)
+                    return index;
+                index++;
+                current = current.next;
             }
-            public bool Contains(int item)
+            return -1;
+        }
+        public bool Contains(int item)
+        {
+            return IndexOf(item) != -1;
+        }
+        public int[] ToArray()
+        {
+            var array = new int[size];
+            var current = first;
+            var index = 0;
+            while (current != null)
             {
-                return IndexOf(item) != -1;
+                array[index++] = current.value;
+                current = current.next;
             }
-            public int[] ToArray()
+            return array;
+        }
+        public void Reverse()
+        {
+            if (IsEmpty()) throw new Exception();
+            var previous = first;
+            var current = first.next;
+            while (current != null)
             {
-                var array = new int[size];
-                var current = first;
-                var index = 0;
-                while (current != null)
-                {
-                    array[index++] = current.value;
-                    current = current.next;
-                }
-                return array;
+                var next = current.next;
+                current.next = previous;
+                previous = current;
+                current = next;
             }
-            public void Reverse()
+            last = first;
+            last.next = null;
+            first = previous;
+        }
+        public int GetKthFromTheEnd(int k)
+        {
+            if (IsEmpty()) throw new Exception();
+            if (k > size) throw new Exception();
+            var pinter1 = first;
+            var current = first;
+            var index = 0;
+            while (index != k)
             {
-                if (IsEmpty()) throw new Exception();
-                var previous = first;
-                var current = first.next;
-                while (current != null)
-                {
-                    var next = current.next;
-                    current.next = previous;
-                    previous = current;
-                    current = next;
-                }
-                last = first;
-                last.next = null;
-                first = previous;
+                current = current.next;
+                index++;
             }
-            public int GetKthFromTheEnd(int k)
+            while (current.next != null)
             {
-                if (IsEmpty()) throw new Exception();
-                if (k > size) throw new Exception();
-                var pinter1 = first;
-                var current = first;
-                var index = 0;
-                while (index != k)
-                {
-                    current = current.next;
-                    index++;
-                }
-                while (current.next != null)
-                {
-                    current = current.next;
-                    pinter1 = pinter1.next;
-                }
+                current = current.next;
+                pinter1 = pinter1.next;
+            }
 
-                return pinter1.value;
-            }
-            public void PrintMiddle()
+            return pinter1.value;
+        }
+        public void PrintMiddle()
+        {
+            var a = first;
+            var b = first;
+            while (b != last && b.next != last)
             {
-                var a = first;
-                var b = first;
-                while (b != last && b.next != last)
-                {
-                    b = b.next.next;
-                    a = a.next;
-                }
-                if (b == last)
-                    Console.WriteLine(a.value);
-                else
-                    Console.WriteLine(a.value + ", " + a.next.value);
+                b = b.next.next;
+                a = a.next;
             }
-            public bool HasLoop()
+            if (b == last)
+                Console.WriteLine(a.value);
+            else
+                Console.WriteLine(a.value + ", " + a.next.value);
+        }
+        public bool HasLoop()
+        {
+            var a = first;
+            var b = first;
+            while (a != null && b != null && b.next != null)
             {
-                var a = first;
-                var b = first;
-                while (a != null && b != null && b.next != null)
-                {
-                    a = a.next;
-                    b = b.next.next;
-                    if (a == b) return true;
-                }
-                return false;
+                a = a.next;
+                b = b.next.next;
+                if (a == b) return true;
             }
+            return false;
         }
     }
 }
