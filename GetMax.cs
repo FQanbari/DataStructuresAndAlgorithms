@@ -1,20 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DataStructures
 {
-    partial class Program
+    class HackerRank
     {
-        static void Main(string[] args)
-        {
-            //var str = new List<string> { "1 83", "3", "2", "1 76" };
-            var str = new List<string> { "1 1", "1 44", "3", "3", "2", "3", "3", "1 3", "1 37", "2", "3", "1 29", "3", "1 73", "1 51", "3", "3", "3", "1 70" };
-            var result = GetMax(str);
-            var result1 = getMax1(str);
-            var result2 = getMax2(str);
-
-        }
-        public static List<int> GetMax(List<string> operations)
+        public List<int> GetMax(List<string> operations)
         {
             var result = new Stack<int>();
             var result1 = new List<int>();
@@ -47,6 +41,4 @@ namespace DataStructures
             return result1;
         }
     }
-
 }
-
