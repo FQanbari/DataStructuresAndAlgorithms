@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oiOtinE7Mxofa1aK82Sp7LQJTwqRN8B96sgogw37KW6JDMk5H7pm85qFclTPMVJ+jtfLExCLkpeAnMtPPerzww==",
+  "dgSpecHash": "XOS9jHESUTOPNKkDpxoI6CMBu7A+16F5e1Kmk+9Itf8biPTIQ+egjEJWCCdqej4n51fgJ/gwYl7vxXfmChmZjA==",
   "success": true,
   "projectFilePath": "E:\\Projects\\DataStructures\\DataStructures\\DataStructures.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

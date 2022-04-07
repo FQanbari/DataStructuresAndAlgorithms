@@ -7,18 +7,20 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 5, 3, 8, 4, 1, 2 };
-            string[] charnumber = { "5", "3", "8", "4", "1", "2" };
-            var minHeap = new MinHeap(10);
-            foreach(var item in charnumber)
-                minHeap.Add(item, Convert.ToInt32(item));
+            string[] words = { "boy", "book", "border", "cat", "dog", "doctor", "fine", "finest", "figure", "pick", "pickle", "picture" };
+            string[] words3 = { "cat", "doctor", "fine", "finest", "figure", "pick", "pickle", "picture" };
+            string[] words2 = { "boy", "book" };
+            string[] words4 = { "fine", "finest", "figure" };
+            string[] words5 = { "pick", "pickle", "picture" };
+            var trie = new Trie();
 
-            Console.WriteLine(minHeap.Remove());
-            Console.WriteLine(minHeap.Remove());
-            Console.WriteLine(minHeap.Remove());
-            Console.WriteLine(minHeap.Remove());
+            foreach (var w in words5)
+                trie.insert(w);
+
+            Console.WriteLine("prefix: " + trie.longestCommonPrefix());
+            Console.WriteLine(trie.contains("book"));
+            Console.WriteLine("count: " + trie.countWords());
         }
     }
-
 }
 
