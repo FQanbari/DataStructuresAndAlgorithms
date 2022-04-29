@@ -1,13 +1,35 @@
 {
   "version": 2,
-  "dgSpecHash": "XOS9jHESUTOPNKkDpxoI6CMBu7A+16F5e1Kmk+9Itf8biPTIQ+egjEJWCCdqej4n51fgJ/gwYl7vxXfmChmZjA==",
+  "dgSpecHash": "9DTwedvvJlapC/VlsofsnTP8wr/p/k6luWnHzKElup/fvIpq7V2AJFCT/qRL3Yqng7s/Y8WkdOehv9heatdHMA==",
   "success": true,
   "projectFilePath": "E:\\Projects\\DataStructures\\DataStructures\\DataStructures.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ARVIN\\.nuget\\packages\\dotnetty.common\\0.7.2\\dotnetty.common.0.7.2.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\ikvm\\8.1.5717\\ikvm.8.1.5717.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ARVIN\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\nettopologysuite\\2.4.0\\nettopologysuite.2.4.0.nupkg.sha512",
     "C:\\Users\\ARVIN\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
-    "C:\\Users\\ARVIN\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+    "C:\\Users\\ARVIN\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\ARVIN\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'IKVM 8.1.5717' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "IKVM",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

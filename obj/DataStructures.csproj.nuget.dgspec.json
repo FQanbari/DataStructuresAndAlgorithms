@@ -44,6 +44,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "DotNetty.Common": {
+              "target": "Package",
+              "version": "[0.7.2, )"
+            },
+            "IKVM": {
+              "target": "Package",
+              "version": "[8.1.5717, )"
+            },
+            "NetTopologySuite": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "System.Collections": {
               "target": "Package",
               "version": "[4.3.0, )"
@@ -64,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }
