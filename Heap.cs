@@ -10,6 +10,30 @@ namespace DataStructures
         {
             return item[0];
         }
+        public int Min()
+        {
+            return item[size - 1];
+        }
+        public int remove(int value)
+        {
+            if (isEmpty())
+                throw new Exception();
+
+            int root = 0;
+            foreach(var i in item)
+            {
+                if(i == value)
+                {
+                    root = i;
+                    break;
+                }
+            }
+
+            size--;
+            bubbleDown();
+
+            return root;
+        }
         public void insert(int value)
         {
             if (isFull())
