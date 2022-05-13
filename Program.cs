@@ -11,12 +11,10 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            var sorting = new BucketSort();
-            var list = new int[] {};
-            sorting.sort(list,4);
+            var sorting = new Search();
+            var list = new int[] {  };
 
-            foreach (var item in list)
-                Console.WriteLine(item);
+            Console.WriteLine(sorting.exponentialSearch(list,5));
         }
     }
 }
