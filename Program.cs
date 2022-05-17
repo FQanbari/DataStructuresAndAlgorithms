@@ -4,6 +4,7 @@ using java.util;
 using System;
 using System.Runtime;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 namespace DataStructures
 {
@@ -11,10 +12,10 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            var sorting = new Search();
-            var list = new int[] {  };
+            var str = "abcd";
+            var str2 = "cabac";
 
-            Console.WriteLine(sorting.exponentialSearch(list,5));
+            Console.WriteLine(StringUtils.isPalindrome(null));
         }
     }
 }
