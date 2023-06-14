@@ -1,5 +1,4 @@
 ﻿//using Lucene.Net.Util;
-using java.util;
 //using NetTopologySuite.Utilities;
 using System;
 using System.Runtime;
