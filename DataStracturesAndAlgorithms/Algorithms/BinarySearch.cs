@@ -2,7 +2,7 @@
 
 public class BinarySearch
 {
-    public static int Play(int[] array, int goal)
+    public static int Search(int[] array, int goal)
     {
         if (array == null || array.Length == 0) return -1;
 
